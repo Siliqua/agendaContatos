@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% block title %}{% endblock %}
+
+	
+	{% block content %}
+
+	<div class="spam3">
+   		<div class="well sidebar-nav">
+   			<div class="nav-header ">
+   				<div class="centralizar">
+    	<img class="img-polaroid" src="{{ contato.foto.url }}" width="200px"/><br>
+    	Nome: {{ contato.nome }} <br>
+    	Idade: {{ contato.idade }} <br>
+   		E-mail: <a href="mailto:{{ contato.email }}">{{ contato.email }}</a><br>
+    	Telefone: {{ contato.telefone }} <br>
+    	Facebook: <a href="http://www.facebook.com/{{ contato.facebook }}">{{ contato.facebook }}</a><br>
+    	Criado em: {{ contato.criado_em }} <br>
+    	</div>
+    </div>
+</div>    
+</div>
+<a class="btn" href="http://127.0.0.1:8000/"/><i class="icon-chevron-left"></i>Retornar</a>
+
+	{% endblock %}
+    </body>
+</html>

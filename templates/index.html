@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>{% block title %}Agenda de Contatos - SLQA{% endblock %}</h1>
+
+{% block content %}
+    <h3 class="muted">CONTATOS</h3>
+    {% if contatos %}
+
+        <table class="table table-bordered ">
+            <thead>
+              <tr>
+               {% for contato in contatos %}
+                <th class="nav-header"><i class="icon-user"></i> <a href="{{ contato.get_absolute_url }}">{{ contato.nome }}</a></th>
+                {% endfor %}
+              </tr>
+            </thead>
+        </table>
+         {% else %}
+        <p class="alert alert-success">Não existem contatos.</p>
+    {% endif %}
+
+
+<div class="spam3">
+    <div class="well sidebar-nav">
+   <span class="label label-info">Info</span> <div class="nav-header" href="">COMPONENTES</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Breno Lessa</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Dhiego Morais</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Hugo Brito</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Maiane Salomão</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Matheus Sampaio</div>
+    <div class="nav-header" href=""><i class="icon-flag"></i>Moara Brito</div>
+  {% endblock %}
+            </div>
+         </div>   
+
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     {% load staticfiles %}
+     <title class="alert alert-info">{% block head_title %}Agenda de Contatos | SLQA{% endblock %}</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'agenda/css/bootstrap.css' %}" />
+     <script src="{% static 'agenda/js/bootstrap.js' %}"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top ">
+             <div class="navbar-inner">
+                <p class="brand">SILIQUA [SLQA]</p>
+             </div>
+        </div>
+
+        <div class="container">
+            <div class="row-fluid">
+
+                 <h1 class="page-header">{% block title %}Agenda de Contatos - Equipe SLQA{% endblock %}</h1>
+                 {% block content %}
+
+                 {% endblock %}
+            </div>
+        </div>
+        <footer class="row"></footer>
+    </body>
+</html>
