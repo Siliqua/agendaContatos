@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 
 def index(request):
     return render_to_response('index.html', {
-        'contatos': Contato.objects.all()[:5]
+        'contatos': Contato.objects.all()[:]
     })
 
 def view_contato(request, nome):
